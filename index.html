@@ -6,6 +6,8 @@
     <title>myPortfolio</title>
 
     <link href = "https://codepen.io/CKH4/pen/vNyyaL.css" rel = "stylesheet" type = "text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href = "./style.css" rel = "stylesheet" type = "text/css">
 </head>
 <body>
     <div class="stars">
@@ -310,6 +312,39 @@
           <div class="star"></div>
         </div>
     </div>
-    
+
+    <div class="navbar">
+        <div class="logo">
+            myPortfolio
+        </div>
+
+        <div class="links">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu">
+            <i class="material-icons" onclick="showMenu()">menu</i>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src = "./showMenu.js" type = "text/javascript"></script>
+
 </body>
 </html>
