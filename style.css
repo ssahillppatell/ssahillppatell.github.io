@@ -104,8 +104,11 @@ body {
     }
 
         .home .homeContent .greetings {
+            display: grid;
+            width: 50%;
+            grid-auto-flow: column;
             color: #FF9933;
-            font-size: 0.9em;;
+            font-size: 0.9em;
         }
 
         .home .homeContent .name {
@@ -115,9 +118,38 @@ body {
         }
 
         .home .homeContent .graduation {
+            margin-bottom: 50px;
             color: #EFEFEF;
             font-size: 1em;
         }
+
+        .home .homeContent .resume {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            
+            cursor: pointer;
+        }
+            .home .homeContent .resume .downloadButton {
+                padding: 10px 0px;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+
+                border-style: solid;
+                border-width: 2px;
+                border-color: #7780D4;
+            }
+
+            .home .homeContent .resume .downloadButton i {
+                grid-column: 2/3;
+                justify-self: start;
+            }
+
+            .home .homeContent .resume .downloadButton div {
+                margin-top: 2px;
+                margin-left: 3px;
+                grid-column: 3/5;
+            }
 
 
 /* ********************************************************************** */
@@ -130,7 +162,9 @@ body {
             }
 
             .navbar .logo {
-                grid-column: 6/7;
+                grid-column: 6/8;
+                justify-self: center;
+                align-self: center;
             }
             .navbar .links {
                 display: none;
@@ -138,8 +172,10 @@ body {
 
             .menu {
                 display: initial;
-                grid-column: 10/11;
+                grid-column: 11/12;
                 cursor: pointer;
+                justify-self: center;
+                align-self: center;
             }
 
             .dropdown nav ul{
@@ -148,6 +184,7 @@ body {
                 grid-template-rows: repeat(4, minmax(min-content, 40px));
                 padding: 0px;
             }
+            
         .home {
             margin-top: 100px;
         }
@@ -158,5 +195,9 @@ body {
             .home .homeContent {
                 margin-left: 10px;
                 grid-column: 2/8;
+            }
+
+            .home .homeContent .greetings {
+                width:100%;
             }
     }
