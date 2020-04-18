@@ -53,6 +53,12 @@ body {
                     text-decoration: none;
                     color: white;
                 }
+            
+            .navbar .navbarIllustration img {
+                width:100%;
+                max-width: 50px;
+                height: auto;
+            }
 
 .menu {
     user-select: none;
@@ -122,11 +128,6 @@ body {
                 display: initial;
                 place-items: center;
             }
-                .navbar .navbarIllustration img {
-                    width:100%;
-                    max-width: 50px;
-                    height: auto;
-                }
 
             .navbar .logo {
                 grid-column: 6/7;
