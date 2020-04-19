@@ -13,8 +13,14 @@
 }
 
 body {
+    overflow-y: auto;
+    overflow-x: hidden;
     color: white;
     font-family: "Existence-Light", sans-serif;
+}
+
+.stars {
+    position: fixed;
 }
 
 .navbar {
@@ -80,7 +86,8 @@ body {
 
 .home {
     display: grid;
-    margin: 130px 0px;
+    margin-top: 130px;
+    margin-bottom: 170px;
     grid-template-columns: repeat(8, 1fr);
 }
 
@@ -151,53 +158,144 @@ body {
                 grid-column: 3/5;
             }
 
+hr {
+    width: 30%;
+    align-self: center;
+    margin-bottom: 150px;
+}
+
+.work {
+    margin-bottom: 150px;
+}
+
+.sectionName {
+    margin-left: 100px;
+    margin-bottom: 100px;
+}
+
+    .work .workContent {
+        display: grid;
+        place-content: center;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: repeat( auto-fit, minmax(220px, 280px) );
+        grid-gap: 60px;
+    }
+
+.card {
+    border-style: solid;
+    border-width: 1px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    min-height: 400px;
+    max-height: 420px;
+}
+
+                    .work .workContent .card .cardDescription .relevantLinks a img{
+                        width: 100%;
+                        max-width: 22px;
+                        height: auto;
+                    }
+
+    .card .cardTitle {
+        padding: 10px;
+        grid-row: 1/2;
+    }
+
+        .card .cardTitle .langs {
+            margin-top: 3px;
+            font-size: 0.8em;
+            color: #EFEFEF;
+        }
+
+    .card .cardDescription {
+        padding: 10px;
+        grid-row: 5/6;
+
+        font-size: 0.8em;
+    }
+
+        .card .cardDescription .relevantLinks {
+            margin-top: 5px;
+        }
+
+    .card .cardImage {
+        grid-row: 2/5;
+        display: grid;
+        background-color: white;
+        opacity: 0.8;
+    }
+
+        .card .cardImage img {
+            place-self: center;
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+            opacity: 1;
+        }
 
 /* ********************************************************************** */
 
-    @media only screen and (max-width: 700px) {
-            .navbar .navbarIllustration {
-                grid-column: 2/4;
-                display: initial;
-                place-items: center;
-            }
-
-            .navbar .logo {
-                grid-column: 6/8;
-                justify-self: center;
-                align-self: center;
-            }
-            .navbar .links {
-                display: none;
-            }
-
-            .menu {
-                display: initial;
-                grid-column: 11/12;
-                cursor: pointer;
-                justify-self: center;
-                align-self: center;
-            }
-
-            .dropdown nav ul{
-                display: grid;
-                place-items: center;
-                grid-template-rows: repeat(4, minmax(min-content, 40px));
-                padding: 0px;
-            }
-            
-        .home {
-            margin-top: 100px;
+@media only screen and (max-width: 700px) {
+        .navbar .navbarIllustration {
+            grid-column: 2/4;
+            display: initial;
+            place-items: center;
         }
-            .home .homeIllustration {
-                display: none;
-            }
 
-            .home .homeContent {
-                margin-left: 10px;
-                grid-column: 2/8;
-            }
+        .navbar .logo {
+            grid-column: 6/8;
+            justify-self: center;
+            align-self: center;
+        }
+        .navbar .links {
+            display: none;
+        }
 
-            .home .homeContent .greetings {
-                width:100%;
-            }
+        .menu {
+            display: initial;
+            grid-column: 11/12;
+            cursor: pointer;
+            justify-self: center;
+            align-self: center;
+        }
+
+        .dropdown nav ul{
+            display: grid;
+            place-items: center;
+            grid-template-rows: repeat(4, minmax(min-content, 40px));
+            padding: 0px;
+        }
+
+    .home {
+        margin-top: 100px;
+        margin-bottom: 100px;
     }
+        .home .homeIllustration {
+            display: none;
+        }
+
+        .home .homeContent {
+            margin-left: 10px;
+            grid-column: 2/8;
+        }
+
+        .home .homeContent .greetings {
+            width:100%;
+        }
+    
+    hr {
+        width: 50%;
+        margin-bottom: 70px;
+    }
+
+    .sectionName {
+        margin-left: 40px;
+        margin-bottom: 60px;
+    }
+
+    .work {
+        margin-bottom: 70px;
+    }
+}
