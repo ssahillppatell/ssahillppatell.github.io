@@ -235,6 +235,76 @@ hr {
             opacity: 1;
         }
 
+
+.about {
+    margin-bottom: 150px;
+}
+
+.aboutContent {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+}
+
+
+    .aboutContent .myImage {
+        grid-column: 7/9;
+    }
+
+            .aboutContent .myImage img {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+
+    .aboutContent .writtenContent {
+        grid-column: 2/6;
+    }
+
+    .aboutContent .myName {
+        font-size: 2.2em;
+    }
+
+    .aboutContent .mySkills {
+        margin-top: 50px;
+        font-size: 1.6em;
+    }
+
+    .aboutContent .mySkills .listOfSkills {
+        font-size: 0.7em;
+    }
+        .aboutContent .mySkills .listOfSkills ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(40px, 50px));
+            grid-gap: 20px;
+            padding: 0px;
+            list-style-type: none;
+        }
+
+        .aboutContent .mySkills .listOfSkills ul li {
+            display: inline;
+        }
+
+        .aboutContent .mySkills .listOfSkills img{
+            width: 100%;
+            max-width: 50px;
+            min-width: 40px;
+            height: auto;
+        }
+
+.saffron {
+    color: #FF9933;
+}
+
+    .aboutContent .favs {
+        display: grid;
+        grid-template-columns: 120px repeat(2, 1fr);
+    }
+
+    .aboutContent .favs ul {
+        list-style-type: none;
+        padding: 0px;
+    }
+
 /* ********************************************************************** */
 
 @media only screen and (max-width: 700px) {
@@ -295,7 +365,29 @@ hr {
         margin-bottom: 60px;
     }
 
-    .work {
+    .work, .about{
         margin-bottom: 70px;
     }
+
+        .aboutContent .myImage {
+            display: none;
+        }
+        .aboutContent .writtenContent {
+            grid-column: 2/9;
+        }
+
+        .aboutContent .favs {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+                .aboutContent .mySkills .listOfSkills img{
+                    width: 100%;
+                    max-width: 40px;
+                    min-width: 35px;
+                    height: auto;
+                }
+
+                .aboutContent .mySkills .listOfSkills ul {
+                    grid-gap: 10px;
+                }
 }
