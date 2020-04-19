@@ -305,6 +305,71 @@ hr {
         padding: 0px;
     }
 
+.contactContent {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 30px repeat(8, 60px);
+}
+
+    .contactContent .instruction {
+        grid-column: 2/8;
+        grid-row: 1/2;
+    }
+
+    .contactContent textarea {
+        grid-column: 2/9;
+        grid-row: 2/8;
+        background: none;
+        color: white;
+    }
+
+    .contactContent .sendButton {
+        grid-column: 2/3;
+        grid-row: 8/9;
+        display: grid;
+        place-items: center;
+        align-self: center;
+        padding: 10px;
+    
+        border-style: solid;
+        border-width: 2px;
+        border-color: #7780D4;
+    }
+
+    .contactContent img {
+        grid-row-start: 7;
+        grid-column: 6/10;
+        place-self: center;
+        z-index: 2;
+        width: 100%;
+        max-width: 500px;
+        min-width: 400px;
+        height: auto;
+    }
+
+    .socialMedia ul{
+        list-style-type: none;
+        padding: 0px;
+        display: grid;
+        grid-auto-flow: column;
+        place-items: center;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 120px;
+        margin-bottom: 80px;
+    }
+
+        .socialMedia ul li {
+            display: inline;
+        }
+
+        .socialMedia ul li img {
+            width: 100%;
+            max-width: 50px;
+            height: auto;
+        }
+
 /* ********************************************************************** */
 
 @media only screen and (max-width: 700px) {
@@ -339,7 +404,7 @@ hr {
         }
 
     .home {
-        margin-top: 100px;
+        margin-top: 70px;
         margin-bottom: 100px;
     }
         .home .homeIllustration {
@@ -389,5 +454,34 @@ hr {
 
                 .aboutContent .mySkills .listOfSkills ul {
                     grid-gap: 10px;
+                }
+
+    .contactContent {
+        grid-template-rows: 30px repeat(6, 25px) 70px 30px;
+        margin-left: 20px;
+    }
+
+        .contactContent img {
+            grid-row-start: 7;
+            grid-column: 5/10;
+            width: 100%;
+            max-width: 300px;
+            min-width: 120px;
+            height: auto;
+        }
+
+        .contactContent .sendButton {
+            width: 80px;
+            font-size: 0.8em;
+        }
+
+        .socialMedia ul {
+            width: 80%;
+            margin-top: 0px;
+            margin-bottom: 60px;
+        }
+
+                .socialMedia ul li img {
+                    max-width: 28px;
                 }
 }
