@@ -145,6 +145,8 @@ body {
                 border-style: solid;
                 border-width: 2px;
                 border-color: #7780D4;
+                text-decoration: none;
+                color: white;
             }
 
             .home .homeContent .resume .downloadButton i {
@@ -331,6 +333,7 @@ hr {
         align-self: center;
         padding: 10px;
     
+        cursor: pointer;
         border-style: solid;
         border-width: 2px;
         border-color: #7780D4;
